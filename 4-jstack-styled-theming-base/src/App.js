@@ -1,10 +1,11 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import { ThemeProvider } from "styled-components";
 
 import GlobalStyle from "./styles/global";
 import Layout from "./components/Layout";
 
 import themes from "./styles/themes";
+import { func } from "prop-types";
 
 function App() {
   const [theme, setTheme] = useState("dark");
@@ -16,10 +17,31 @@ function App() {
   function handleToggleTheme() {
     setTheme((prevState) => (prevState == "dark" ? "light" : "dark"));
   }
+
   return (
     <ThemeProvider theme={currentTheme}>
       <GlobalStyle />
-      <Layout onToggleTheme={handleToggleTheme} selectedTheme={theme} />
+      {theme === "dark" && (
+        <Layout onToggleTheme={handleToggleTheme} selectedTheme={theme} />
+      )}
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
     </ThemeProvider>
   );
 }
